@@ -35,6 +35,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -410,5 +411,17 @@ body {
     .navbar a {
       padding: 8px;
     }
+  }
+  
+  .whatsapp-icon {
+    position: fixed; /* Fixa o ícone na tela */
+    bottom: 5px;    /* Distância do ícone do fundo da tela */
+    right: 5px;     /* Distância do ícone da lateral direita da tela */
+    z-index: 1000;   /* Garante que o ícone ficará sobre outros elementos */
+  }
+  
+  .whatsapp-icon img {
+    width: 90px; /* Define o tamanho do ícone, ajuste conforme necessário */
+    height: 90px; /* Define a altura do ícone */
   }
   
