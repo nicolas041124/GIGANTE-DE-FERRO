@@ -1,0 +1,130 @@
+/* Variáveis de cores */
+:root {
+    --cinza-escuro: #2D2D2D;
+    --cinza-medio: #6B6B6B;
+    --cinza-claro: #D4D4D4;
+    --preto: #000000;
+    --laranja: #ff5d1c;
+    --vermelho: #FF6F61;
+}
+
+@font-face {
+    font-family: 'Designer';
+    src: url('/fonts/Designer.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cinza-escuro); /* Usando o cinza escuro para o fundo */
+    color: var(--cinza-claro); /* Texto claro para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+/* Seção de Treinadores */
+#treinadores {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--cinza-medio); /* Fundo em cinza médio */
+    border-radius: 10px;
+}
+
+#treinadores h2 {
+    font-family: 'Designer';
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--laranja); /* Cor vibrante laranja para o título */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#treinadores p {
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Estilos para os treinadores */
+.treinador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--cinza-medio); /* Borda entre os treinadores em cinza médio */
+    padding-bottom: 30px;
+}
+
+.treinador:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+.foto {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto img:hover {
+    transform: scale(1.05); /* Efeito de zoom na imagem */
+}
+
+.informacoes {
+    flex: 2;
+    max-width: 700px;
+}
+
+.informacoes h3 {
+    font-family: 'Designer';
+    font-size: 2.5rem;
+    color: var(--preto); /* preto para o nome do treinador */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.informacoes p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.informacoes p strong {
+    color: var(--laranja); /* Destaque para as especializações em laranja */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .treinador {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .foto {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .informacoes {
+        max-width: 100%;
+    }
+}

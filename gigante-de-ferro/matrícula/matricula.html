@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de matrícula da academia Gigante de Ferro. Inscreva-se para começar a treinar conosco!">
+    <title>Formulário de Matrícula - Gigante de Ferro</title>
+    <link rel="stylesheet" href="/gigante-de-ferro/matrícula/styles.css"> <!-- Link para o arquivo de CSS -->
+</head>
+<body>
+
+    <!-- Conteúdo principal da página -->
+    <main>
+        <section class="matricula-section">
+            <header>
+                <h1>Formulário de Matrícula</h1>
+                <p>Preencha o formulário abaixo para se matricular na academia Gigante de Ferro e começar sua jornada de treinos!</p>
+            </header>
+
+            <!-- Formulário -->
+            <form id="formulario">
+                <!-- Seção de Informações Pessoais -->
+                <fieldset>
+                    <legend>Informações Pessoais</legend>
+
+                    <!-- Nome Completo -->
+                    <div class="form-group">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+                    </div>
+                </fieldset>
+
+                <!-- Seção de Escolha de Plano -->
+                <fieldset>
+                    <legend>Escolha o Plano</legend>
+
+                    <!-- Plano Desejado -->
+                    <div class="form-group">
+                        <label for="plano">Plano Desejado</label>
+                        <select id="plano" name="plano" required>
+                            <option value="basico">Básico</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!-- Seção de Termos e Condições -->
+                <fieldset>
+                    <legend>Termos e Condições</legend>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="termos" required> Aceito os termos e condições
+                        </label>
+                    </div>
+                    
+                    <!-- Link para mostrar os termos e condições -->
+                    <a href="javascript:void(0);" onclick="toggleTerms()">Leia os termos e condições</a>
+                    
+<!-- Div onde os termos estarão ocultos -->
+<div id="termos" style="display:none; margin-top: 10px;">
+    <h3>Termos e Condições de Uso - Academia Gigante de Ferro</h3>
+
+    <p><strong>1. Aceitação dos Termos</strong><br>
+    Ao realizar a matrícula ou se inscrever nos serviços da Academia Gigante de Ferro, o usuário concorda com todos os termos e condições descritos neste documento. Caso não concorde com os termos, não deverá utilizar nossos serviços. O uso contínuo da nossa academia implica na aceitação destes termos.</p>
+    
+    <p><strong>2. Descrição dos Serviços</strong><br>
+    A Academia Gigante de Ferro oferece uma variedade de serviços, incluindo: musculação, treinamento funcional, aulas de yoga, pilates, dança, spinning, e outras modalidades. O acesso aos serviços estará disponível conforme o plano de adesão escolhido.</p>
+    
+    <p><strong>3. Planos e Pagamento</strong><br>
+    A Academia Gigante de Ferro oferece planos mensais, trimestrais, semestrais e anuais. Os preços variam de acordo com o plano escolhido. Os pagamentos podem ser feitos por meio de cartão de crédito, débito, PIX, ou boleto bancário. Os pagamentos devem ser realizados até a data de vencimento estipulada, sob risco de suspensão do acesso aos serviços.</p>
+
+    <p><strong>4. Cancelamento e Reembolso</strong><br>
+    O aluno pode solicitar o cancelamento da matrícula a qualquer momento. Caso o aluno deseje cancelar a matrícula antes do término do período contratado, o valor pago não será reembolsado, salvo em casos de desistência por motivo de saúde, mediante a apresentação de atestado médico. Em caso de pagamento antecipado, a academia não realizará reembolso de valores proporcionais ao período não utilizado.</p>
+
+    <p><strong>5. Políticas de Uso das Instalações</strong><br>
+    O aluno concorda em utilizar as instalações da Academia Gigante de Ferro de forma responsável, respeitando as normas de segurança, higiene e os horários estabelecidos para o uso dos equipamentos e salas de aula. O uso de roupas adequadas para a prática de atividades físicas é obrigatório. O aluno é responsável por zelar pela integridade dos equipamentos e pela organização dos espaços comuns.</p>
+
+    <p><strong>6. Responsabilidades do Aluno</strong><br>
+    O aluno é responsável por informar à academia qualquer condição de saúde pré-existente que possa interferir em sua segurança durante as atividades físicas. A academia recomenda a realização de uma avaliação física inicial, que será oferecida de forma gratuita. A realização de uma avaliação física periódica é sugerida para garantir a segurança e eficácia dos treinos.</p>
+
+    <p><strong>7. Saúde e Segurança</strong><br>
+    Para garantir a segurança dos alunos, a Academia Gigante de Ferro exige que o aluno apresente um atestado médico válido caso não tenha realizado uma avaliação física inicial. Além disso, o aluno se compromete a seguir as orientações dos instrutores e a utilizar os equipamentos conforme as instruções fornecidas.</p>
+
+    <p><strong>8. Agendamento de Aulas</strong><br>
+    Algumas modalidades de aulas exigem agendamento prévio, como aulas de personal training e aulas de grupos pequenos. A academia permite que o aluno agende suas aulas através do aplicativo da academia ou pelo site. O não comparecimento a aulas agendadas sem aviso prévio de 24 horas poderá resultar na perda da aula e na não reposição.</p>
+
+    <p><strong>9. Propriedade Intelectual</strong><br>
+    O aluno concorda que qualquer material produzido dentro da academia, como fotos, vídeos ou gravações, pode ser utilizado pela Academia Gigante de Ferro em suas campanhas publicitárias, promoções e redes sociais, salvo se o aluno expressar, por escrito, sua não autorização para o uso dessas imagens.</p>
+
+    <p><strong>10. Alterações nos Termos e Condições</strong><br>
+    A Academia Gigante de Ferro se reserva o direito de alterar estes Termos e Condições a qualquer momento, sem aviso prévio. Quaisquer mudanças serão publicadas no site da academia e estarão em vigor a partir da data de sua publicação. O uso contínuo dos nossos serviços após alterações constitui aceitação dos novos termos.</p>
+
+    <p><strong>11. Política de Privacidade</strong><br>
+    A Academia Gigante de Ferro se compromete a proteger as informações pessoais dos seus alunos. Os dados fornecidos durante o cadastro, como nome, e-mail, telefone e informações de saúde, são armazenados de forma segura e utilizados apenas para fins administrativos e de comunicação com o aluno. Nenhum dado pessoal será compartilhado com terceiros sem o consentimento do aluno, exceto quando necessário para cumprimento de obrigações legais.</p>
+
+    <p><strong>12. Disposições Gerais</strong><br>
+    Estes Termos e Condições são regidos pelas leis da República Federativa do Brasil. Em caso de disputas, as partes concordam que o foro competente será o da cidade de São Paulo, Estado de São Paulo, onde a Academia Gigante de Ferro está localizada. Caso qualquer disposição destes termos seja considerada inválida ou inaplicável, as demais disposições permanecerão em vigor.</p>
+
+    <p><strong>13. Contato</strong><br>
+    Se você tiver dúvidas ou precisar de mais informações sobre nossos Termos e Condições, entre em contato conosco pelo e-mail: contato@gigantedeferro.com.br ou pelo telefone (11) 5555-1234. Estamos à disposição para esclarecer qualquer dúvida.</p>
+</div>
+
+                    
+                </fieldset>
+
+                <!-- Botão de envio -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Enviar Matrícula</button>
+                </div>
+            </form>
+
+            <!-- Botão para voltar para a página inicial -->
+            <div class="form-group">
+                <a href="http://127.0.0.1:3000/gigante-de-ferro/index.html" class="back-btn">
+                    Voltar à Página Inicial
+                </a>
+            </div>
+
+            <!-- Mensagem de sucesso (exibida após o envio do formulário) -->
+            <div id="mensagem-sucesso" style="display:none;">
+                <p><strong>Matricula Enviada com Sucesso!</strong></p>
+                <p><strong>Nome:</strong> <span id="msg-nome"></span></p>
+                <p><strong>E-mail:</strong> <span id="msg-email"></span></p>
+                <p><strong>Telefone:</strong> <span id="msg-telefone"></span></p>
+                <p><strong>Plano Escolhido:</strong> <span id="msg-plano"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Gigante de Ferro - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o script JavaScript -->
+    <script src="/gigante-de-ferro/matrícula/script.js"></script>
+</body>
+</html>

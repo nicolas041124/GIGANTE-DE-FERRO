@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Designer';
+    src: url('/fonts/Designer.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+/* Variáveis de Cores */
+:root {
+    --cinza-escuro: #2D2D2D;
+    --cinza-medio: #6B6B6B;
+    --cinza-claro: #D4D4D4;
+    --preto: #000000;
+    --laranja: #ff5d1c;
+    --vermelho: #FF6F61;
+}
+
+/* Fontes */
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte principal */
+    background-color: var(--cinza-escuro); /* Fundo escuro */
+    color: var(--cinza-claro); /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Seção de Contato */
+#contato {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--cinza-medio); /* Fundo mais claro */
+    border-radius: 10px;
+    text-align: center;
+}
+
+#contato h2 {
+    font-family: 'Designer', sans-serif; /* Fonte personalizada para o título */
+    font-size: 2.5rem;
+    color: var(--laranja); /* Título em laranja */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#contato p {
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    color: var(--cinza-claro); /* Texto de descrição claro */
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+form label {
+    font-size: 1.1rem;
+    color: var(--cinza-claro);
+    text-align: left;
+    width: 80%;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 12px;  /* Aumenta o padding para melhorar a área clicável */
+    margin: 10px 0;  /* Aumenta o espaço entre os campos */
+    border: 1px solid var(--laranja);
+    border-radius: 5px;
+    background-color: var(--cinza-escuro);
+    color: var(--vermelho);
+    font-family: 'Roboto', sans-serif; /* Fonte do formulário */
+}
+
+/* Efeito de foco para campos de entrada e textarea */
+form input:focus, form textarea:focus {
+    border-color: var(--laranja);  /* Destaque com a cor laranja */
+    background-color: var(--cinza-medio)  ;/* Mudança de fundo ao focar */
+    outline: none;  /* Remove o contorno padrão */
+}
+
+form button {
+    background-color: var(--laranja);
+    color: var(--preto);
+    padding: 15px 35px; /* Aumenta o padding para tornar o botão mais imponente */
+    font-size: 1.3rem;  /* Aumenta o tamanho da fonte para mais legibilidade */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: var(--vermelho); /* Hover em vermelho */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do botão */
+}
+
+/* Modal */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe15;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form input, form textarea, form button {
+        width: 90%;
+    }
+}
+
+.informacoescenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

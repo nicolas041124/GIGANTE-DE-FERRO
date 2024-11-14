@@ -1,0 +1,134 @@
+:root {
+    --cinza-escuro: #2D2D2D;
+    --cinza-medio: #6B6B6B;
+    --cinza-claro: #D4D4D4;
+    --preto: #000000;
+    --laranja: #ff5d1c;
+    --vermelho: #FF6F61;
+}
+
+@font-face {
+    font-family: 'Designer';
+    src: url('/fonts/Designer.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cinza-escuro); /* Fundo escuro */
+    color: var(--cinza-claro); /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Seção de Planos */
+#planos {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--cinza-medio); /* Fundo cinza médio para o container */
+    border-radius: 10px;
+    text-align: center;
+}
+
+#planos h2 {
+    font-family: 'Designer';
+    font-size: 4rem;
+    color: var(--laranja); /* Título em laranja */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#planos p {
+    font-family: 'Roboto';
+    font-size: 2.5rem;
+    color: var(--cinza-claro); /* Texto de descrição claro */
+    margin-bottom: 40px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container para os planos de preços */
+.preco-opcoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espaçamento entre os planos */
+    flex-wrap: wrap; /* Responsivo em telas menores */
+}
+
+/* Estilo para cada plano */
+.plano {
+    background-color: var(--preto); /* Fundo preto para o plano */
+    color: var(--cinza-claro); /* Texto claro para contraste */
+    padding: 30px;
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* 3 planos com espaçamento, garantindo que fiquem lado a lado */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plano:hover {
+    transform: translateY(-10px); /* Efeito de "hover" para destacar o plano */
+}
+
+.plano h3 {
+    font-family: 'Designer';
+    font-size: 3rem;
+    color: var(--laranja); /* Nome do plano em laranja */
+    margin-bottom: 15px;
+}
+
+.plano .valor {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--laranja); /* Valor destacado em laranja */
+    margin-bottom: 20px;
+}
+
+.plano .beneficios {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.plano .beneficios li {
+    font-family: 'Roboto';
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.plano .btn-inscricao {
+    background-color: var(--laranja); /* Botão laranja */
+    color: var(--preto); /* Texto preto no botão */
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.plano .btn-inscricao:hover {
+    background-color: var(--vermelho); /* Muda para vermelho no hover */
+}
+
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 768px) {
+    .preco-opcoes {
+        flex-direction: column; /* Coloca os planos em coluna em telas pequenas */
+        align-items: center;
+    }
+
+    .plano {
+        width: 90%; /* Ajusta o tamanho para telas menores */
+        margin-bottom: 20px;
+    }
+}

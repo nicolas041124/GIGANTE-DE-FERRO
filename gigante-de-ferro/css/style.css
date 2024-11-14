@@ -1,0 +1,414 @@
+@import url(./sobre.css);
+@import url(./nossoservico.css);
+@import url(./treinadores.css);
+@import url(./planos.css);
+@import url(./contatos.css);
+@import url(./faq.css);
+@import url(./footer.css);
+
+:root {
+    --cinza-escuro: #2D2D2D;
+    --cinza-medio: #6B6B6B;
+    --cinza-claro: #D4D4D4;
+    --preto: #000000;
+    --laranja: #ff5d1c;
+    --vermelho: #ffdad7;
+}
+
+
+
+@font-face {
+    font-family: 'Designer';
+    src: url('/fonts/Designer.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+/* Reset de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+}
+
+ h2, h3, h4  {
+    font-size: 3rem;
+    color: var(--laranja);
+    font-family: Designer, fantasy, Arial, Helvetica, sans-serif;
+}
+/*================================================================== padrão==================================================================*/
+/*=================================================================Cabeçalho=================================================================*/
+header {
+    background-color: var(--preto);
+    top: 0;
+    color: #FFFFFF; /* Branco para contraste */
+    padding: 0px 0;
+    text-align: center;
+    position: sticky;
+    z-index: 1000;
+}
+
+.centernav img{
+    width: 10rem;
+    height: auto;
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.centernav {
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1000;
+    
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--laranja);
+    font-size: 1.8rem;
+}
+
+.fontpadao {
+    font-family: 'Designer';
+
+}
+
+nav ul li a:hover {
+    color: var(--vermelho);
+}
+
+#fontdiferenciais{
+    font-size: 1.8rem;
+    list-style: none;
+}
+
+#sobre {
+    font-family: 'Roboto';
+}
+
+#sobre strong {
+    color: var(--laranja);
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+/*=================================================================Seções principais=================================================================*/
+/* Estilo para a seção de serviços */
+#servicos {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--cinza-claro); /* Fundo claro para destacar os cartões */
+}
+
+
+
+#servicos h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--cinza-escuro); /* Cinza escuro */
+}
+
+#servicos p {
+    font-size: 18px;
+    color: var(--cinza-medio); /* Cinza médio */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container para os cartões */
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Garante que os cartões fiquem em colunas flexíveis */
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+/* Estilo para cada cartão de serviço */
+.cartao-servico {
+    background-color: #ffffff; /* Fundo branco para destacar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Animação suave para o efeito de flutuação */
+    width: 100%; /* Para garantir que os cartões não ultrapassem a largura do seu contêiner */
+    max-width: 300px; /* Limita a largura dos cartões */
+}
+
+.cartao-servico h3 {
+    font-size: 24px;
+    color: var(--preto); /* Preto para os títulos */
+    margin-bottom: 15px;
+}
+
+.cartao-servico p {
+    font-size: 16px;
+    color: var(--cinza-medio); /* Cinza médio */
+}
+
+/* Efeito de flutuação dos cartões */
+.cartao-servico:hover {
+    transform: translateY(-10px); /* Levanta o cartão ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para um efeito de flutuação mais forte */
+}
+
+
+
+section {
+    padding: 4rem 2rem;
+    margin: 2rem 0;
+}
+
+section {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    color: var(--preto);
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+/* Seção FAQ */
+#faq h2 {
+    text-align: center;
+    font-size: 3.2rem;
+    color: var(--preto);
+}
+
+#faq div {
+    margin-top: 2rem;
+}
+
+#faq h3 {
+    font-size: 2.2rem;
+    color: var(--laranja)
+}
+
+#faq p {
+    font-size: 1.8rem;
+    color: var(--vermelho)
+}
+
+.redesociais{
+    list-style: none;
+}
+
+
+
+/* Links em geral */
+a {
+    color: var(--laranja);
+}
+
+a:hover {
+    color: var(--vermelho);
+}
+
+/* Carrossel */
+#carrossel {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CSS Geral - Estilos para desktop e telas grandes */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Limita a largura da página em telas grandes */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--vermelho);
+    text-align: justify;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+  }
+  
+  /* Layout Flexível para o conteúdo */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .flex-item {
+    flex: 1 1 300px; /* Cada item ocupa no mínimo 300px e pode se expandir */
+    margin: 10px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .flex-item h2 {
+    font-size: 1.5rem;
+  }
+  
+  .flex-item p {
+    font-size: 0.9rem;
+  }
+  
+  /* Grid Layout - Para dispositivos maiores */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colunas ajustáveis */
+    gap: 20px;
+  }
+  
+  .grid-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Media Queries - Estilos Responsivos */
+  
+  /* Para dispositivos até 768px (Tablets e Celulares Orientação Vertical) */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px; /* Reduz o tamanho da fonte em dispositivos menores */
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .flex-container {
+      flex-direction: column; /* Coloca os itens em uma coluna */
+      align-items: center;
+    }
+  
+    .flex-item {
+      width: 100%; /* Ocupa toda a largura disponível */
+      margin: 10px 0;
+    }
+  
+    .grid-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta para telas menores */
+    }
+  }
+  
+  /* Para dispositivos até 480px (Celulares em geral) */
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px; /* Diminui ainda mais o tamanho da fonte em dispositivos pequenos */
+    }
+  
+    h1 {
+      font-size: 1.5rem; /* Tamanho da fonte do título menor */
+    }
+  
+    .container {
+      padding: 10px;
+    }
+  
+    .flex-container {
+      flex-direction: column; /* Itens em coluna */
+    }
+  
+    .flex-item {
+      margin: 5px 0;
+    }
+  
+    .grid-container {
+      grid-template-columns: 1fr; /* Coloca os itens em uma única coluna */
+    }
+  }
+  
+  /* Garantir que as imagens fiquem responsivas em qualquer tela */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Exemplo de estilo para um menu de navegação simples */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .navbar a:hover {
+    background-color: #575757;
+  }
+  
+  /* Ajustes para o Menu em telas pequenas */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar a {
+      padding: 8px;
+    }
+  }
+  

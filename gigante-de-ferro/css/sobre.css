@@ -1,0 +1,101 @@
+:root {
+    --cinza-escuro: #2D2D2D;
+    --cinza-medio: #6B6B6B;
+    --cinza-claro: #D4D4D4;
+    --preto: #000000;
+    --laranja: #ff5d1c;
+    --vermelho: #FF6F61;
+}
+@font-face {
+    font-family: 'Designer';
+    src: url('/fonts/Designer.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Medium.ttf') format('truetype');
+}
+/* CSS para a seção "Sobre" da academia */
+
+body {
+    font-family: 'Designer';
+    line-height: 1.6;
+    background-color: var(--cinza-claro)
+}
+
+h2.display-4 {
+    font-family:Designer ;
+    color: var(--laranja)
+}
+
+.h4-mb-3{
+    font-size: 3rem;
+    font-family: 'Designer' ;
+}
+
+
+
+h3.h4 {
+    color: var(--laranja)
+}
+
+p.text-justify {
+    font-family:'Roboto';
+    color:var(--cinza-medio);
+}
+
+.jornada{
+    font-family: 'Roboto';
+    font-size: 2rem;
+    color: var(--cinza-medio);
+}
+section#sobre {
+    padding: 60px 0;
+    background-color:var(--cinza-claro);
+    border-top: 4px solid var(--vermelho);
+    border-bottom: 4px solid var(--vermelho);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+img.img-fluid {
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img.img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.list-group-item {
+    border: none;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.list-group-item strong {
+    color: #343a40;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h2.display-4 {
+        font-size: 3rem;
+    }
+    .list-group-item {
+        font-size: 14px;
+    }
+}
+ 
+.diferenciais{
+    font-size: 2.0rem;
+    font-family: "Roboto";
+}
+
+

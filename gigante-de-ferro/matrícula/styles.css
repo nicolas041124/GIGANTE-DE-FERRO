@@ -1,0 +1,333 @@
+/* Definindo variáveis para cores */
+:root {
+    --cinza-escuro: #2D2D2D;
+    --cinza-medio: #6B6B6B;
+    --cinza-claro: #D4D4D4;
+    --preto: #000000;
+    --laranja: #ff5d1c;
+    --vermelho: #FF6F61;
+    --branco: #ffffff;
+    --azul-claro: #e0f7fa;
+    --cinza-claro-escuro: #f1f1f1;
+    --sombra-card: rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+    font-family: 'Designer';
+    src: url('/fonts/Designer.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('/IMG/gigante de ferro.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--cinza-escuro);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Reset básico de margens e paddings */
+fieldset {
+    border: none;  
+    padding: 0;    
+    margin: 0;     
+}
+
+legend {
+    font-size: 1.5rem;
+    color: var(--cinza-escuro);
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px 0;
+    position: sticky;
+}
+
+header .centernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header img {
+    max-width: 150px;
+}
+
+header .fontpadao {
+    display: flex;
+    gap: 30px;
+}
+
+header .fontpadao li {
+    list-style: none;
+}
+
+header .fontpadao a {
+    text-decoration: none;
+    color: var(--branco);
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+header .fontpadao a:hover {
+    color: var(--laranja);
+}
+
+/* Estilo para o conteúdo principal */
+.matricula-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: var(--branco);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px var(--sombra-card);
+    transform: translateY(20px);
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.matricula-section h1 {
+    font-family: 'Designer', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--cinza-escuro);
+    letter-spacing: 1px;
+}
+
+.matricula-section p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--cinza-medio);
+}
+
+/* Estilo do formulário */
+.matricula-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--cinza-escuro);
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid var(--cinza-claro);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: var(--cinza-claro-escuro);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--laranja);
+    background-color: var(--azul-claro);
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 93, 28, 0.5);
+}
+
+.form-group input::placeholder,
+.form-group select option {
+    color: var(--cinza-medio);
+}
+
+/* Estilo do checkbox (termos de uso) */
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group label input[type="checkbox"] {
+    font-size: 14px;
+    color: var(--cinza-escuro);
+}
+
+/* Estilo do botão de envio */
+.submit-btn {
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: var(--vermelho);
+    transform: scale(1.05);
+}
+
+.submit-btn:active {
+    background-color: var(--laranja);
+    transform: scale(1);
+}
+
+/* Estilo do botão "Voltar à Página Inicial" */
+.back-btn {
+    background-color: var(--cinza-medio);
+    color: var(--cinza-escuro);
+    padding: 14px 24px;
+    font-size: 16px;
+    border: 1px solid var(--cinza-escuro);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    display: flex;     
+    justify-content: center;
+    align-items: center;
+}
+
+.back-btn:hover {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    transform: translateY(-3px);
+}
+
+.back-btn:active {
+    background-color: var(--cinza-medio);
+    transform: translateY(0);
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px var(--sombra-card);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Garante que o rodapé sempre apareça no final da página */
+main {
+    flex: 1;
+}
+
+/* Estilo para a mensagem de sucesso */
+#mensagem-sucesso {
+    background-color: var(--azul-claro); 
+    border: 1px solid var(--cinza-claro); 
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-card);
+    display: none; 
+}
+
+/* Estilos para o texto de confirmação */
+#mensagem-sucesso p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cinza-escuro);
+    margin: 5px 0;
+}
+
+#mensagem-sucesso strong {
+    color: var(--laranja);
+}
+
+/* Estilo para o botão de voltar */
+.back-btn {
+    background-color: var(--cinza-medio);
+    color: var(--cinza-escuro);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.back-btn:hover {
+    background-color: var(--cinza-medio);
+}
+
+/* Exibição do campo de termos */
+#termos {
+    display: none; 
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .matricula-section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .submit-btn, .back-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
